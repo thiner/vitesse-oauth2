@@ -2,18 +2,20 @@
   <img src='https://user-images.githubusercontent.com/11247099/111864893-a457fd00-899e-11eb-9f05-f4b88987541d.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
 </p>
 
+# Vitesse OAuth2
+
 <h6 align='center'>
 <a href="https://vitesse-lite.netlify.app/">在线 Demo</a>
 </h6>
 
 <h5 align='center'>
-<b>轻量版的 <a href="https://github.com/antfu/vitesse">Vitesse</a></b>
+<b>轻量版的 <a href="https://github.com/antfu/vitesse">Vitesse</a> 并支持 OAuth2</b>
 </h5>
 
 <br>
 
 <p align='center'>
-<a href="https://github.com/antfu/vitesse-lite/blob/main/README.md">English</a> | <b>简体中文</b>
+<a href="https://github.com/thiner/vitesse-oauth2/blob/main/README.md">English</a> | <b>简体中文</b>
 </p>
 
 <br>
@@ -22,9 +24,9 @@
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 3](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - 就是快！
 
-- 🗂 [基于文件的路由](./src/pages)
+- 🗂 [基于文件的路由](https://github.com/thiner/vitesse-oauth2/tree/main/src/pages)
 
-- 📦 [组件自动化加载](./src/components)
+- 📦 [组件自动化加载](https://github.com/thiner/vitesse-oauth2/tree/main/src/components)
 
 - 🎨 [UnoCSS](https://github.com/unocss/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 
@@ -38,11 +40,15 @@
 
 - ☁️ 零配置部署 Netlify
 
+- 🔐 OAuth2 认证支持
+
 <br>
 
-完整特性,请查看 [Vitesse](https://github.com/antfu/vitesse)
+完整特性，请查看 [Vitesse](https://github.com/antfu/vitesse)
 
-## 从 [Vitesse](https://github.com/antfu/vitesse) 中删除了以下特性
+## 移除的功能
+
+以下是从 [Vitesse](https://github.com/antfu/vitesse) 中移除的功能：
 
 - ~~i18n~~
 - ~~Layouts~~
@@ -69,18 +75,27 @@
 - [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) - 自动加载组件
 - [VueUse](https://github.com/antfu/vueuse) - 实用的 Composition API 工具合集
 
+## OAuth2 集成
+
+此模板在 Vitesse Lite 的基础上扩展了 OAuth2 认证功能，使您能够：
+
+- 轻松集成 OAuth2 提供商（Google、GitHub 等）
+- 使用 Vue 管理认证状态
+- 保护需要认证的路由
+- 处理令牌刷新和会话管理
+
 ## 现在可以试试!
 
 ### GitHub 模板
 
-[使用这个模板创建仓库](https://github.com/antfu/vitesse-lite/generate).
+[使用这个模板创建仓库](https://github.com/thiner/vitesse-oauth2/generate).
 
 ### 克隆到本地
 
 如果您更喜欢使用更干净的 git 历史记录手动执行此操作
 
 ```bash
-npx degit antfu/vitesse-lite my-vitesse-app
-cd my-vitesse-app
+npx degit thiner/vitesse-oauth2 my-vitesse-oauth2-app
+cd my-vitesse-oauth2-app
 pnpm i # 如果你没装过 pnpm, 可以先运行: npm install -g pnpm
 ```
